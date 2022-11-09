@@ -3,6 +3,8 @@ package Steps;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.PendingException;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -94,6 +96,16 @@ public class Logowanie {
     public void uzytkownik_nie_zostal_poprawnie_zalogowany() {
         System.out.println("Uzytkownik nie zostal zalogowany");
         Assert.assertEquals("https://the-internet.herokuapp.com/login",driver.getCurrentUrl());
+    }
+
+    @When("^Uzytkownik wpisuje (.+) w pole username$")
+    public void uzytkownik_wpisuje_w_pole_username2(String nazwauzytkownika) {
+
+    }
+
+    @And("^Uzytkownik wpisuje (.+) w pole password$")
+    public void uzytkownik_wpisuje_w_pole_password2(String haslo) {
+
     }
 
     @AfterAll
