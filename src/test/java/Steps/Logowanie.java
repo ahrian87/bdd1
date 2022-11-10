@@ -100,12 +100,12 @@ public class Logowanie {
 
     @When("^Uzytkownik wpisuje (.+) w pole username$")
     public void uzytkownik_wpisuje_w_pole_username2(String nazwauzytkownika) {
-
+        driver.findElement(By.id("username")).sendKeys(nazwauzytkownika);
     }
 
     @And("^Uzytkownik wpisuje (.+) w pole password$")
     public void uzytkownik_wpisuje_w_pole_password2(String haslo) {
-
+        driver.findElement(By.id("password")).sendKeys(haslo);
     }
 
     @AfterAll
